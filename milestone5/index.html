@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharebale Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- (Section-Left) : {Work Experience, Technical Skills} -->
+        <div class="work-exp" id="work-exp">
+            <h2>Work Experience</h2>
+            <div id="workContainer">
+                <div class="work-experience">
+                    <label for="company1">Company Name:</label>
+                    <input type="text" class="company-input" placeholder="Company Name" required><br>
+
+                    <label for="designation1">Designation:</label>
+                    <input type="text" class="designation-input" placeholder="Designation in Company" required><br>
+
+                    <label for="description1">Description:</label>
+                    <textarea class="description-input" placeholder="A brief description of the work done" required></textarea><br>
+                </div>
+            </div>
+            <button type="button" id="addWork">Add More Work Experience</button>
+            <h2>Technical Skills</h2>
+            <div id="skillContainer">
+                <div class="skill">
+                    <label for="skill1">Enter Skill:</label>
+                    <input type="text" class="skill-input" placeholder="Add Skill" required><br>
+                </div>
+            </div>
+            <button type="button" id="addSkill">Add More skill</button>
+        </div>
+
+        <!-- (Section-Right) : {Personal Info, Education, Certifications} -->
+        <div class="pers-info" id="pers-info">
+            <h2>Personal Information</h2>
+            <label for="profilePic">Upload Profile Picture:</label>
+            <input type="file" id="profilePic" accept="image/*" required><br>
+            
+            <label for="username">User Name:</label>
+            <input type="text" id="username" required><br>
+
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required><br>
+
+            <label for="designation">Designation:</label>
+            <input type="text" id="designation" required><br>
+
+            <label for="contact">Contact #:</label>
+            <input type="tel" id="contact" required><br>
+
+            <label for="linkedIn">LinkedIn:</label>
+            <input type="url" id="linkedIn" required><br>
+
+            <label for="github">GitHub:</label>
+            <input type="url" id="github" required><br>
+
+            <h2>Education History</h2>
+            <div id="educationContainer">
+                <div class="education">
+                    <label for="education1">Education:</label>
+                    <input type="text" class="education-input" placeholder="BS (Computer Science) from XYZ University" required><br>
+                </div>
+            </div>
+            <button type="button" id="addEducation">Add More Education</button>
+
+            <h2>Certifications</h2>
+            <div id="certificationContainer">
+                <div class="certification">
+                    <label for="certification1">Certification:</label>
+                    <input type="text" class="certification-input" placeholder="Certification 1"><br>
+                </div>
+            </div>
+            <button type="button" id="addCertification">Add More Certifications</button>
+        </div>
+    </div>
+
+    <!-- Resume Preview (Hidden by default, visible after generating) -->
+    <div id="resumePreview" contenteditable="true" style="display:none;"></div>
+
+    <div id="container-shareable-link" style="display: none;">
+        <h4>Please find your shareable link below:</h4>
+        <a href="#" id="shareable-link" target="_blank"></a>
+        <br>
+        <button id="downloadaspdf"><b>Download as PDF</b></button>
+    </div>
+
+    <!-- Submit Button -->
+    <button id="generateResume">Generate Resume</button>
+
+    <!-- TypeScript -->
+    <script src="script.js" type="module"></script>
+</body>
+</html>
